@@ -35,7 +35,7 @@ wifi.sta.config(sta_config)
 
 local function msg_to_table(str)
     t={}
-    str:gsub(".",function(c) table.insert(t,c) end)
+    str:gsub(".",function(c) table.insert(t,tonumber(c)) end)
     return t
 end
 
