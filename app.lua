@@ -30,7 +30,6 @@ wifi.sta.config(sta_config)
 --
 -- WORK: WAIT FOR TCP STUFF
 --
--- Step 2 - Wait for TCP broadcasts
 --
 -- Auxiliary functions
 
@@ -40,6 +39,7 @@ local function msg_to_table(str)
     return t
 end
 
+-- Step 2 - Wait for TCP broadcasts
 local port = 8972
 local server = net.createServer(net.UDP)
 server:on("receive", function(server, pl)
